@@ -1,0 +1,1 @@
+"use strict"; // ← meilleurs message d'erreurs
