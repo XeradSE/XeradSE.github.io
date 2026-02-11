@@ -76,6 +76,61 @@ nav {
   padding: 4rem 2rem;
 }
 
+/* --- STYLE DES TABLEAUX --- */
+
+/* Conteneur pour gérer le scroll sur mobile */
+.table-wrapper {
+  overflow-x: auto; /* Permet de scroller horizontalement si l'écran est trop petit */
+  margin: 2rem 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); /* Petite ombre esthétique */
+  border-radius: 8px; /* Arrondi les coins du tableau */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Fusionne les bordures pour un rendu net */
+  background-color: #ffffff;
+  font-size: 0.95rem;
+  min-width: 400px; /* Force une largeur min pour ne pas écraser le contenu */
+}
+
+/* L'en-tête du tableau */
+thead tr {
+  background-color: var(--accent-color); /* Utilise ton bleu (ou autre couleur définie plus haut) */
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Les cellules (en-tête et corps) */
+th, td {
+  padding: 12px 15px; /* Espace à l'intérieur des cases */
+}
+
+/* Les lignes du corps */
+tbody tr {
+  border-bottom: 1px solid #dddddd;
+  transition: background-color 0.2s ease;
+}
+
+/* "Zebra Striping" : Une ligne sur deux est grisée pour la lecture */
+tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+/* Effet au survol de la souris */
+tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: default;
+  font-weight: 500; /* Le texte devient légèrement plus gras */
+  color: var(--accent-color); /* Le texte prend la couleur d'accent */
+}
+
+/* La toute dernière ligne a une bordure plus épaisse pour fermer le tableau */
+tbody tr:last-of-type {
+  border-bottom: 2px solid var(--accent-color);
+}
+
 h2 { font-size: 2rem; margin-bottom: 2rem; text-align: center; }
 
 .projects-grid {
@@ -120,3 +175,4 @@ footer {
   .hero h1 { font-size: 2rem; }
   .nav-links { display: none; } /* À toi de gérer le menu burger en JS si tu veux ! */
 }
+
