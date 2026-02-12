@@ -180,7 +180,7 @@ footer {
   text-decoration: underline;
 }
 
-.container > h3 {
+#about > h3 {
   text-align: center;
   padding-top: 20px;
 }
