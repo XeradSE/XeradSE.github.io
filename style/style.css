@@ -179,3 +179,8 @@ footer {
 .link {
   text-decoration: underline;
 }
+
+.container > h3 {
+  text-align: center;
+  padding-top: 20px;
+}
