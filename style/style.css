@@ -150,14 +150,32 @@ h2 { font-size: 2rem; margin-bottom: 2rem; text-align: center; }
     top: 50%;
     transform: translateY(-50%); /* Centre verticalement */
     z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    
+    /* Le centrage Flexbox */
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    
+    /* Reset pour éviter les marges fantômes des navigateurs */
+    padding: 0; 
+    line-height: 1; 
 }
+
 .carousel-btn:hover { background-color: #1e4bb8; }
-.carousel-btn.prev { left: -50px; }
-.carousel-btn.next { right: -50px; }
+
+/* Positionnement ET Ajustement optique */
+.carousel-btn.prev { 
+    left: -50px; 
+    padding-right: 3px; /* Pousse la flèche légèrement vers la gauche */
+    padding-bottom: 3px; /* Pareil mais vers le haut */
+}
+
+.carousel-btn.next { 
+    right: -50px; 
+    padding-left: 3px; /* Pousse la flèche légèrement vers la droite */
+    padding-bottom: 3px; /* Pareil mais vers le haut */
+}
 
 /* --- 6. AUTRES SECTIONS --- */
 .table-wrapper {
