@@ -168,13 +168,13 @@ h2 { font-size: 2rem; margin-bottom: 2rem; text-align: center; }
 .carousel-btn.prev { 
     left: -50px; 
     padding-right: 3px; /* Pousse la flèche légèrement vers la gauche */
-    padding-bottom: 3px; /* Pareil mais vers le haut */
+    padding-bottom: 4px; /* Pareil mais vers le haut */
 }
 
 .carousel-btn.next { 
     right: -50px; 
     padding-left: 3px; /* Pousse la flèche légèrement vers la droite */
-    padding-bottom: 3px; /* Pareil mais vers le haut */
+    padding-bottom: 4px; /* Pareil mais vers le haut */
 }
 
 /* --- 6. AUTRES SECTIONS --- */
