@@ -1,35 +1,32 @@
-/* --- 1. VARIABLES (Change tes couleurs ici) --- */
+/* --- 1. VARIABLES --- */
 :root {
-  --bg-color: #f4f4f9;         /* Couleur de fond du site */
-  --text-color: #333333;       /* Couleur du texte principal */
-  --accent-color: #2563eb;     /* Couleur des liens et boutons (Bleu) */
-  --secondary-color: #ffffff;  /* Fond des cartes projets */
+  --bg-color: #f4f4f9;
+  --text-color: #333333;
+  --accent-color: #2563eb;
+  --secondary-color: #ffffff;
   --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --max-width: 1200px;         /* Largeur max du contenu */
+  --max-width: 1200px;
 }
 
 /* --- 2. RESET & BASES --- */
-* {
-  box-sizing: border-box; /* Indispensable pour éviter les galères de taille */
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   font-family: var(--font-main);
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
+  overflow-x: hidden; /* Évite le scroll horizontal global */
 }
 
 a { text-decoration: none; color: inherit; transition: 0.3s; }
 ul { list-style: none; }
 
-/* --- 3. NAVIGATION (Navbar) --- */
+/* --- 3. NAVIGATION --- */
 header {
   background: var(--secondary-color);
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  position: sticky; /* La nav reste en haut quand on scroll */
+  position: sticky;
   top: 0;
   z-index: 1000;
 }
@@ -39,27 +36,24 @@ nav {
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between; /* Ecarte le logo des liens */
+  justify-content: space-between;
   align-items: center;
 }
 
 .logo { font-weight: bold; font-size: 1.5rem; color: var(--accent-color); }
-
 .nav-links { display: flex; gap: 2rem; }
 .nav-links a:hover { color: var(--accent-color); }
 
-/* --- 4. HERO SECTION (L'intro) --- */
+/* --- 4. HERO SECTION --- */
 .hero {
   text-align: center;
   padding: 5rem 1rem;
   max-width: 800px;
   margin: 0 auto;
 }
-
 .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-.hero span { color: var(--accent-color); } /* Pour mettre ton nom en couleur */
+.hero span { color: var(--accent-color); }
 .hero p { font-size: 1.2rem; color: #666; margin-bottom: 2rem; }
-
 .btn {
   background: var(--accent-color);
   color: white;
@@ -69,76 +63,14 @@ nav {
 }
 .btn:hover { opacity: 0.9; transform: translateY(-2px); }
 
-/* --- 5. GRILLE DE PROJETS (Le cœur du portfolio) --- */
+/* --- 5. GRILLE DE PROJETS --- */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 4rem 2rem;
 }
 
-/* --- STYLE DES TABLEAUX --- */
-
-/* Conteneur pour gérer le scroll sur mobile */
-.table-wrapper {
-  overflow-x: auto; /* Permet de scroller horizontalement si l'écran est trop petit */
-  margin: 2rem 0;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); /* Petite ombre esthétique */
-  border-radius: 8px; /* Arrondi les coins du tableau */
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse; /* Fusionne les bordures pour un rendu net */
-  background-color: #ffffff;
-  font-size: 0.95rem;
-  min-width: 400px; /* Force une largeur min pour ne pas écraser le contenu */
-}
-
-/* L'en-tête du tableau */
-thead tr {
-  background-color: var(--accent-color); /* Utilise ton bleu (ou autre couleur définie plus haut) */
-  color: #ffffff;
-  text-align: left;
-  font-weight: bold;
-}
-
-/* Les cellules (en-tête et corps) */
-th, td {
-  padding: 12px 15px; /* Espace à l'intérieur des cases */
-}
-
-/* Les lignes du corps */
-tbody tr {
-  border-bottom: 1px solid #dddddd;
-  transition: background-color 0.2s ease;
-}
-
-/* "Zebra Striping" : Une ligne sur deux est grisée pour la lecture */
-tbody tr:nth-of-type(even) {
-  background-color: #f9f9f9;
-}
-
-/* Effet au survol de la souris */
-tbody tr:hover {
-  background-color: #f1f1f1;
-  cursor: default;
-  font-weight: 500; /* Le texte devient légèrement plus gras */
-  color: var(--accent-color); /* Le texte prend la couleur d'accent */
-}
-
-/* La toute dernière ligne a une bordure plus épaisse pour fermer le tableau */
-tbody tr:last-of-type {
-  border-bottom: 2px solid var(--accent-color);
-}
-
 h2 { font-size: 2rem; margin-bottom: 2rem; text-align: center; }
-
-.projects-grid {
-  display: grid;
-  /* Création auto des colonnes : responsive magique sans media queries */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
 
 .card {
   background: var(--secondary-color);
@@ -146,22 +78,105 @@ h2 { font-size: 2rem; margin-bottom: 2rem; text-align: center; }
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
+  height: 100%; /* Uniformise la hauteur */
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+/* Grid interne à chaque page du carrousel */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Force exactement 2 colonnes (donc 2x2) */
+  gap: 1.5rem; /* Espace un peu réduit (avant 2rem) */
+  width: 100%;
+  max-width: 1000px; /* Limite la largeur pour rapetisser les cartes */
+  margin: 0 auto; /* Centre la grille dans le carrousel */
 }
 
-.card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+/* ... garde le CSS de .card tel quel ... */
 
 .card-img {
   width: 100%;
-  height: 200px;
-  background-color: #ddd; /* Gris par défaut si pas d'image */
+  height: 160px; /* Hauteur réduite (avant 200px) pour des cartes plus compactes */
+  background-color: #ddd;
   object-fit: cover;
 }
 
-.card-content { padding: 1.5rem; }
+.card-content { 
+  padding: 1.2rem; /* Marges internes réduites (avant 1.5rem) */
+}
+
 .card-content h3 { margin-bottom: 0.5rem; }
 .tags { font-size: 0.85rem; color: var(--accent-color); margin-top: 1rem; display: block;}
 
-/* --- 6. FOOTER --- */
+/* --- CARROUSEL CSS (CORRIGÉ) --- */
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-track-wrapper {
+    overflow: hidden; /* CACHE ce qui dépasse */
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex; /* ESSENTIEL : met les pages côte à côte */
+    flex-direction: row; 
+    flex-wrap: nowrap; /* Interdit le retour à la ligne */
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-page {
+    min-width: 100%; /* Prend toute la largeur visible */
+    flex: 0 0 100%;
+    padding: 10px; /* Petit espace interne */
+}
+
+/* Boutons Flèches */
+.carousel-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centre verticalement */
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.carousel-btn:hover { background-color: #1e4bb8; }
+.carousel-btn.prev { left: -50px; }
+.carousel-btn.next { right: -50px; }
+
+/* --- 6. AUTRES SECTIONS --- */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 2rem 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  min-width: 400px;
+}
+th, td { padding: 12px 15px; text-align: left;}
+thead tr { background-color: var(--accent-color); color: #ffffff; }
+tbody tr:nth-of-type(even) { background-color: #f9f9f9; }
+tbody tr:hover { background-color: #f1f1f1; color: var(--accent-color); }
+
 footer {
   text-align: center;
   padding: 2rem;
@@ -170,15 +185,32 @@ footer {
   margin-top: 4rem;
 }
 
-/* --- 7. MOBILE (Petits ajustements) --- */
-@media (max-width: 768px) {
-  .hero h1 { font-size: 2rem; }
-  .nav-links { display: none; } /* À toi de gérer le menu burger en JS si tu veux ! */
+.link { text-decoration: underline; }
+
+/* --- 7. MOBILE --- */
+@media (max-width: 900px) {
+  /* On rapproche les flèches sur petit écran */
+  .carousel-btn.prev { left: -10px; }
+  .carousel-btn.next { right: -10px; }
+  .container { padding: 4rem 1rem; }
 }
 
-.link {
-  text-decoration: underline;
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .nav-links { display: none; }
+  
+  /* Sur mobile, on peut cacher les flèches et scroller si on veut, 
+     mais ici on garde les boutons pour faire simple */
 }
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Repasse à 1 seule colonne sur les petits écrans */
+  }
+}
+
+/*
+*/
 
 #about > h3 {
   text-align: center;
