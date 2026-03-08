@@ -2,7 +2,7 @@
 
 My personal portfolio website, built with pure HTML, CSS, and JavaScript. No frameworks, no dependencies.
 
-🌐 **Live:** [xeradse.github.io](https://xeradse.github.io)
+**Live:** [xeradse.github.io](https://xeradse.github.io)
 
 ## About
 
