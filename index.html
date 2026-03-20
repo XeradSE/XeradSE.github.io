@@ -1,203 +1,215 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mon Portfolio</title>
-        <link rel="stylesheet" href="./style/style.css">
-        <script src="./script/index.js"></script>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kylian Bétuel — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./script/index.js"></script>
+</head>
+<body>
 
-        <header>
-            <nav>
-                <div class="logo">Mon Portfolio</div>
-                <ul class="nav-links">
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#skills">Compétences</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <nav>
+            <div class="logo">KB.</div>
+            <ul class="nav-links">
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <main>
-            <section class="hero">
-                <h1>Salut, je suis <span>Kylian Bétuel</span></h1>
-                <h2><span style="color: #666">Étudiant en Informatique.</span></h2>
-                <a href="#contact" class="btn">Me contacter</a>
-            </section>
+    <main>
 
-            <section id="projets" class="container">
-                <h2>Mes Projets</h2>
+        <!-- HERO -->
+        <section class="hero">
+            <p class="hero-eyebrow">// Étudiant en informatique</p>
+            <h1>Kylian<br><em>Bétuel.</em></h1>
+            <p class="hero-sub">Passionné par le développement logiciel, je conçois des applications du terminal au web.</p>
+            <a href="#contact" class="btn">Me contacter →</a>
+        </section>
 
-                <div id="filter-buttons" class="filters-container"></div>
-                
-                <div class="carousel-container">
-                    
-                    <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+        <!-- PROJETS -->
+        <section id="projets" class="section">
+            <p class="section-label">// 01 — Projets</p>
+            <h2>Ce que j'ai construit</h2>
 
-                    <div class="carousel-track-wrapper">
-                        <div class="carousel-track" id="track">
-                            
-                            <div class="carousel-page">
-                                <div class="projects-grid">
-                                    <article class="card">
-                                        <img src="./assets/Projet S3.png" alt="Projet S3" class="card-img">
-                                        <div class="card-content">
-                                            <h3>Site de Gestion de Groupes pour les Universités</h3>
-                                            <p>Création en groupe d’une application de création de
-                                              groupe pour des universités. Application de bureau et site
-                                              web.</p>
-                                            <p><span style="font-style: italic; font-size: 14px">
-                                              Login Étudiant : Donni | asdasdas 
-                                            </span></p>
-                                            <p><span style="font-style: italic; font-size: 14px">
-                                              Login Enseignant : gficou | G@3l_F1ck0u!
-                                            </span></p>
-                                            <p><span style="font-style: italic; font-size: 14px">
-                                              Login Responsable : mmermoz | M@xim3_Merm0z#
-                                            </span></p>
-                                            <p>Site Web : <a href="https://projets.iut-orsay.fr/saes3-mberso1/SiteWeb/routeur.php?controleur=controleurLogin&action=pageLogin"><span class="link">Ici</span></a></p>
-                                            <span class="tags">#PHP #API_REST #PhpMyAdmin #Java #SQL #HTML #CSS</span>
-                                        </div>
-                                    </article>
-                                    <article class="card">
-                                        <img src="./assets/To-Do CLI.png" alt="Projet 4" class="card-img">
-                                        <div class="card-content">
-                                            <h3>To-Do CLI</h3>
-                                            <p>Une simple application terminal pour gérer des tâches (export JSON).</p>
-                                            <p>Github : <a href="https://github.com/XeradSE/To-Do_CLI/"><span class="link">Ici</span></a></p>
-                                            <span class="tags">#C++ #JSON</span>
-                                        </div>
-                                    </article>
-                                    <article class="card">
-                                        <img src="./assets/Conway's Game of Life img.png" alt="Projet 1" class="card-img">
-                                        <div class="card-content">
-                                            <h3>Jeu de la vie</h3>
-                                            <p>Implémentation du jeu de la vie de Conway.</p>
-                                            <p>Github : <a href="https://github.com/XeradSE/Conway_s_Game_of_Life/"><span class="link">Ici</span></a></p>
-                                            <span class="tags">#C++ #Raylib</span>
-                                        </div>
-                                    </article>
-                                    <article class="card">
-                                        <img src="./assets/Snake.png" alt="Project 7" class="card-img">
-                                        <div class="card-content">
-                                            <h3>Snake</h3>
-                                            <p>Un simple jeu Snake fait en C++ avec Raylib.</p>
-                                            <p>Github : <a href="https://github.com/XeradSE/Snake"><span class="link">Ici</span></a></p>
-                                            <span class="tags">#C++ #Raylib</span>
-                                        </div>
-                                    </article>
-                                </div>
+            <div class="carousel-outer">
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track" id="track">
+
+                        <div class="carousel-page">
+                            <div class="projects-grid">
+                                <article class="card">
+                                    <img src="./assets/Projet S3.png" alt="Projet S3" class="card-img">
+                                    <div class="card-content">
+                                        <h3>Site de Gestion de Groupes pour les Universités</h3>
+                                        <p>Application de création de groupes pour des universités. Application de bureau + site web.</p>
+                                        <p><span style="font-style:italic;font-size:.75rem;color:#666">
+                                            Étudiant : Donni / asdasdas — Enseignant : gficou / G@3l_F1ck0u! — Responsable : mmermoz / M@xim3_Merm0z#
+                                        </span></p>
+                                        <p><a href="https://projets.iut-orsay.fr/saes3-mberso1/SiteWeb/routeur.php?controleur=controleurLogin&action=pageLogin">Voir le site →</a></p>
+                                        <span class="tags">#PHP #API_REST #PhpMyAdmin #Java #SQL #HTML #CSS</span>
+                                    </div>
+                                </article>
+                                <article class="card">
+                                    <img src="./assets/To-Do CLI.png" alt="To-Do CLI" class="card-img">
+                                    <div class="card-content">
+                                        <h3>To-Do CLI</h3>
+                                        <p>Application terminal pour gérer des tâches avec export JSON.</p>
+                                        <p><a href="https://github.com/XeradSE/To-Do_CLI/">GitHub →</a></p>
+                                        <span class="tags">#C++ #JSON</span>
+                                    </div>
+                                </article>
+                                <article class="card">
+                                    <img src="./assets/Conway's Game of Life img.png" alt="Jeu de la vie" class="card-img">
+                                    <div class="card-content">
+                                        <h3>Jeu de la vie</h3>
+                                        <p>Implémentation du Jeu de la Vie de Conway.</p>
+                                        <p><a href="https://github.com/XeradSE/Conway_s_Game_of_Life/">GitHub →</a></p>
+                                        <span class="tags">#C++ #Raylib</span>
+                                    </div>
+                                </article>
+                                <article class="card">
+                                    <img src="./assets/Snake.png" alt="Snake" class="card-img">
+                                    <div class="card-content">
+                                        <h3>Snake</h3>
+                                        <p>Un jeu Snake classique en C++ avec Raylib.</p>
+                                        <p><a href="https://github.com/XeradSE/Snake">GitHub →</a></p>
+                                        <span class="tags">#C++ #Raylib</span>
+                                    </div>
+                                </article>
                             </div>
-
-                            <div class="carousel-page">
-                                <div class="projects-grid">
-                                    <article class="card">
-                                        <img src="./assets/Calculatrice.png" alt="Project 5" class="card-img">
-                                        <div class="card-content">
-                                            <h3>Calculatrice</h3>
-                                            <p>Calculatrice graphique avec Qt6 et analyseur syntaxique.</p>
-                                            <p>Github : <a href="https://github.com/XeradSE/Calculatrice"><span class="link">Ici</span></a></p>
-                                            <span class="tags">#C++ #Qt</span>
-                                        </div>
-                                    </article>
-                                    <article class="card">
-                                        <img src="./assets/Portfolio.png" alt="Project 2" class="card-img">
-                                        <div class="card-content">
-                                            <h3>Mon Portfolio (Vous êtes dessus !)</h3>
-                                            <p>Mon site web personnel, créé uniquement avec HTML, CSS et JavaScript. Sans framework ni dépendance particulière.</p>
-                                            <p>Github : <a href="https://github.com/XeradSE/XeradSE.github.io"><span class="link">Ici</span></a></p>
-                                            <span class="tags">#HTML #CSS #JavaScript</span>
-                                        </div>
-                                    </article>
-                                    <article class="card">
-                                        <img src="./assets/2048 img.png" alt="Projet 3" class="card-img">
-                                        <div class="card-content">
-                                            <h3>2048</h3>
-                                            <p>Le célèbre jeu 2048 en Python.</p>
-                                            <p>Github : <a href="https://github.com/XeradSE/2048-Game/"><span class="link">Ici</span></a></p>
-                                            <span class="tags">#Python</span>
-                                        </div>
-                                    </article>
-                                    <article class="card">
-                                        <img src="./assets/Perdition.png" alt="Projet 6" class="card-img">
-                                        <div class="card-content">
-                                            <h3>Perdition (Projet mis en pause !)</h3>
-                                            <p>Un jeu de type roguelike dans le terminal écrit en C++, proposant une génération procédurale, un système de combat au tour par tour et un rendu ASCII via FTXUI.</p>
-                                            <p>Github : <a href="https://github.com/XeradSE/Perdition"><span class="link">Ici</span></a></p>
-                                            <span class="tags">#C++ #FTXUI</span>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-
                         </div>
+
+                        <div class="carousel-page">
+                            <div class="projects-grid">
+                                <article class="card">
+                                    <img src="./assets/Calculatrice.png" alt="Calculatrice" class="card-img">
+                                    <div class="card-content">
+                                        <h3>Calculatrice</h3>
+                                        <p>Calculatrice graphique Qt6 avec analyseur syntaxique.</p>
+                                        <p><a href="https://github.com/XeradSE/Calculatrice">GitHub →</a></p>
+                                        <span class="tags">#C++ #Qt</span>
+                                    </div>
+                                </article>
+                                <article class="card">
+                                    <img src="./assets/Portfolio.png" alt="Portfolio" class="card-img">
+                                    <div class="card-content">
+                                        <h3>Mon Portfolio</h3>
+                                        <p>Ce site web — HTML, CSS, JS pur, sans dépendance.</p>
+                                        <p><a href="https://github.com/XeradSE/XeradSE.github.io">GitHub →</a></p>
+                                        <span class="tags">#HTML #CSS #JavaScript</span>
+                                    </div>
+                                </article>
+                                <article class="card">
+                                    <img src="./assets/2048 img.png" alt="2048" class="card-img">
+                                    <div class="card-content">
+                                        <h3>2048</h3>
+                                        <p>Le célèbre jeu 2048 en Python.</p>
+                                        <p><a href="https://github.com/XeradSE/2048-Game/">GitHub →</a></p>
+                                        <span class="tags">#Python</span>
+                                    </div>
+                                </article>
+                                <article class="card">
+                                    <img src="./assets/Perdition.png" alt="Perdition" class="card-img">
+                                    <div class="card-content">
+                                        <h3>Perdition <span style="color:#666;font-size:.8rem">(en pause)</span></h3>
+                                        <p>Roguelike terminal en C++ — génération procédurale, combat au tour par tour, rendu ASCII via FTXUI.</p>
+                                        <p><a href="https://github.com/XeradSE/Perdition">GitHub →</a></p>
+                                        <span class="tags">#C++ #FTXUI</span>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
                     </div>
-
-                    <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
                 </div>
-            </section>
 
-            <section id="about" class="container">
-                <h2>À propos</h2>
-                <p>Étudiant en 2ème année de BUT Informatique à l’IUT
-                d’Orsay, dans l’Université Paris-Saclay, je suis passionné par
-                ce que je fais, et à l’écoute des autres. Ma rigueur m’a permis
-                d’acquérir des compétences et d’effectuer des projets qui
-                me rendent confiant dans la voie que j’ai choisie.</p>
-                <h3>CV : <a href="./assets/CV - Kylian Betuel.pdf"><span class="link">Ici</span></a></h3>
-            </section>
-
-            <section id="skills" class="container">
-                <h2>Compétences et Aptitudes</h2>
-                <div class="table-wrapper">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>C++</td>
-                                <td>Python</td>
-                            </tr>
-                            <tr>
-                                <td>Java</td>
-                                <td>HTML/CSS</td>
-                            </tr>
-                            <tr>
-                                <td>PL/SQL</td>
-                                <td>PHP</td>
-                            </tr>
-                            <tr>
-                                <td>C#</td>
-                                <td>JavaScript</td>
-                            </tr>
-                            <tr>
-                                <td>Android SDK</td>
-                                <td>SPARQL</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="carousel-dots" id="dots">
+                    <div class="dot active" onclick="goToSlide(0)"></div>
+                    <div class="dot" onclick="goToSlide(1)"></div>
                 </div>
-            </section>
 
-            <section id="contact" class="container">
-                <h2>Contact</h2>
-                <h3>GITHUB</h3>
-                <p><a href="https://github.com/XeradSE">https://github.com/XeradSE</a></p>
-                <h3>LINKEDIN</h3>
-                <p><a href="https://www.linkedin.com/in/kylian-betuel-12b03332a/">https://www.linkedin.com/in/kylian-betuel-12b03332a/</a></p>
-                <h3>E-MAIL</h3>
-                <p>betuelkylian17@gmail.com</p>
-                <h3>TÉLÉPHONE MOBILE</h3>
-                <p>0751545830</p>
-                <h3>ADRESSE POSTALE</h3>
-                <p>91400, Orsay</p>
-            </section>
-        </main>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" onclick="moveSlide(-1)" aria-label="Précédent">&#10094;</button>
+                    <button class="carousel-btn next" onclick="moveSlide(1)" aria-label="Suivant">&#10095;</button>
+                </div>
+            </div>
+        </section>
 
-        <footer>
-            <p>&copy; 2026 Kylian Bétuel. Tous droits réservés.</p>
-        </footer>
+        <!-- ABOUT -->
+        <section id="about" class="section">
+            <p class="section-label">// 02 — À propos</p>
+            <h2>Qui suis-je ?</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Étudiant en 2ème année de BUT Informatique à l'IUT d'Orsay, dans l'Université Paris-Saclay. Je suis passionné par ce que je fais, et à l'écoute des autres. Ma rigueur m'a permis d'acquérir des compétences et d'effectuer des projets qui me rendent confiant dans la voie que j'ai choisie.</p>
+                    <br>
+                    <a href="./assets/CV - Kylian Betuel.pdf" class="about-cv">Télécharger mon CV →</a>
+                </div>
+                <div>
+                    <p class="about-detail">Formation</p>
+                    <p style="color:var(--text);margin-bottom:1.5rem">BUT Informatique — IUT d'Orsay, Université Paris-Saclay</p>
+                    <p class="about-detail">Situation</p>
+                    <p style="color:var(--text)">2ème année — Orsay, 91400</p>
+                </div>
+            </div>
+        </section>
 
-    </body>
+        <!-- SKILLS -->
+        <section id="skills" class="section">
+            <p class="section-label">// 03 — Compétences</p>
+            <h2>Mon arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-pill">C++</div>
+                <div class="skill-pill">Python</div>
+                <div class="skill-pill">Java</div>
+                <div class="skill-pill">HTML / CSS</div>
+                <div class="skill-pill">PL/SQL</div>
+                <div class="skill-pill">PHP</div>
+                <div class="skill-pill">C#</div>
+                <div class="skill-pill">JavaScript</div>
+                <div class="skill-pill">Android SDK</div>
+                <div class="skill-pill">SPARQL</div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section">
+            <p class="section-label">// 04 — Contact</p>
+            <h2>Travaillons ensemble</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <p class="label">GitHub</p>
+                    <p class="value"><a href="https://github.com/XeradSE">github.com/XeradSE</a></p>
+                </div>
+                <div class="contact-item">
+                    <p class="label">LinkedIn</p>
+                    <p class="value"><a href="https://www.linkedin.com/in/kylian-betuel-12b03332a/">linkedin.com/in/kylian-betuel</a></p>
+                </div>
+                <div class="contact-item">
+                    <p class="label">E-mail</p>
+                    <p class="value"><a href="mailto:betuelkylian17@gmail.com">betuelkylian17@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <p class="label">Téléphone</p>
+                    <p class="value">07 51 54 58 30</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Kylian Bétuel — Tous droits réservés.</p>
+    </footer>
+
+
+</body>
 </html>
